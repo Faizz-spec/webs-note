@@ -1,0 +1,295 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFDFEF;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #AA60C8;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+    flex-grow: 1;
+}
+
+/* Content */
+#content {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Article & Projects */
+article {
+    background: #D69ADE;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.projects {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: #EABDE6;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: #FFDFEF;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+aside {
+    background: #AA60C8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+}
+
+aside img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #5a189a;
+}
+
+.biodata {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.biodata div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.biodata strong {
+    min-width: 80px;
+    font-weight: bold;
+    color: #000;
+}
+
+.biodata span, .biodata a {
+    color: #000;
+    text-decoration: none;
+}
+
+.biodata a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Navbar */
+.navbar {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    background-color: #FFDFEF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: #2980b9;
+}
+/* Dropdown Menu */
+
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #D69ADE;
+    min-width: 180px;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    top: 100%; 
+    left: 0; 
+    z-index: 10;
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: black;
+    background: none;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+/* Tampilkan dropdown saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+    background: #FFDFEF;
+}
+
+.slides {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+/* Tombol Navigasi Slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    aside {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    aside {
+        margin-top: 20px;
+    }
+}
